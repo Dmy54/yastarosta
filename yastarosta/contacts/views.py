@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, DetailView, CreateView, DeleteVie
 
 # Create your views here.
 class ContactView(TemplateView):
-    template_name = 'yastarosta/contacts/templates/contacts.html'
+    template_name = 'contacts.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
