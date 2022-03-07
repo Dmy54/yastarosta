@@ -21,5 +21,8 @@ from yastarosta.contacts import *
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('contacts/', include('yastarosta.contacts.urls'))
+    path('contacts/', include('yastarosta.contacts.urls')),
+    # path('calendar/', include('yastarosta.calendar_plan.urls')),
+    # path('materials/', include('yastarosta.materials.urls')),
+    # path('group/', include('yastarosta.student_group.urls')),
 ]
