@@ -3,5 +3,5 @@ from yastarosta.contacts.views import contact_view
 
 
 urlpatterns = [
-    path('/', contact_view, name='contacts.list')
+    path('', contact_view, name='contacts.list')
 ]
