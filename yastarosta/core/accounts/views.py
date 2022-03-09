@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, DetailView, CreateView, DeleteVie
 
 # Create your views here.
 class LoginView(TemplateView):
-    template_name = 'contacts.html'
+    template_name = 'login.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
