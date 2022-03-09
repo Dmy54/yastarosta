@@ -20,8 +20,10 @@ from django.conf.urls import include
 from yastarosta.contacts import *
 
 urlpatterns = [
+    # path('login/', )
     # path('admin/', admin.site.urls),
     path('contacts/', include('yastarosta.contacts.urls')),
+    path('', include('yastarosta.core.urls')),
     # path('calendar/', include('yastarosta.calendar_plan.urls')),
     # path('materials/', include('yastarosta.materials.urls')),
     # path('group/', include('yastarosta.student_group.urls')),
