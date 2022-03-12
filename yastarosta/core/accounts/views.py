@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from django.views.generic import TemplateView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth import authenticate, login
@@ -20,7 +20,7 @@ class LoginView(TemplateView):
         user = authenticate(username=username, password=password)
         if user:
             login(request, user)
+            return redirect(reverse('contacts.list'))
         else:
-            return HttpResponse('no such user')
-        return render(self.request, self.template_name)
+            return redirect(reverse('accounts.login'))
 login_view = LoginView.as_view()

@@ -6,6 +6,9 @@
 {% endblock %}
 
 {% block content %}
+    {% if login_state %}
+        faled
+    {% endif %}
     <p>asd123</p>
     <form action="." method="post">
         {{ login_form.as_p }}
