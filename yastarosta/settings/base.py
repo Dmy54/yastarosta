@@ -61,7 +61,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'core/accounts/templates'),
-                 os.path.join(BASE_DIR, 'contacts/templates'), ],
+                 os.path.join(BASE_DIR, 'contacts/templates'),
+                 os.path.join(BASE_DIR, 'core/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

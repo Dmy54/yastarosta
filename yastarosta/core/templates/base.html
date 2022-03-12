@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    {% block head %}
+    <meta charset="utf-8">
+    {% block title %}{% endblock title %}
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% endblock head %}
+
+    {% block extra_scripts %}{% endblock %}
+
+</head>
+{% block body %}
+<body>
+    {% include 'sidebar_nav.html' %}
+    {% block content %}{% endblock %}
+</body>
+{% endblock body %}
+</html>
