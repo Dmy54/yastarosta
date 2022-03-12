@@ -7,4 +7,9 @@
 
 {% block content %}
     <p>asd123</p>
+    <form action="." method="post">
+        {{ login_form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="login">
+    </form>
 {% endblock %}
