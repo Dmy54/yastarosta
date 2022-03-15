@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <p>asd</p>
-</body>
-</html>
+
+{% block title %}
+    <title>Контакты</title>
+{% endblock %}
+
+{% block content %}
+    {% for contact in contacts %}
+        <span>{{ contact.name }}</span>
+    {% endfor %}
+{% endblock %}
