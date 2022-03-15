@@ -6,8 +6,8 @@
 {% endblock %}
 
 {% block content %}
-    {% if login_state %}
-        faled
+    {% if form.non_field_errors %}
+        {{ form.non_field_errors }}
     {% endif %}
     <p>asd123</p>
     <form action="." method="post">
