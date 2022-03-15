@@ -1,3 +1,8 @@
 {% block navigation %}
-    <p>navigation</p>
+    <div>
+        <a href="{% url 'accounts.login' %}">accounts.login</a>
+        <a href="{% url 'accounts.logout' %}">accounts.logout</a>
+        <a href="{% url 'accounts.registration' %}">accounts.registration</a>
+        <a href="{% url 'contacts.list' %}">contacts.list</a>
+    </div>
 {% endblock %}
