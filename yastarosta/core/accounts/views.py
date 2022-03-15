@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from django.views.generic import TemplateView, DetailView, CreateView, DeleteView, UpdateView
-from django.contrib.auth import authenticate, login
+from django.views.generic.base import RedirectView, TemplateView, View
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from yastarosta.core.accounts.forms import (
     LoginForm,
@@ -49,3 +50,10 @@ class RegistrationView(TemplateView):
         user.name = name
         user.save()
 registration_view = RegistrationView.as_view()
+
+
+class LogoutView(View):
+    def dispatch(self, request, *args, **kwargs):
+        logout(request)
+        return redirect(reverse('accounts.login'))
+logout_view = LogoutView.as_view()
